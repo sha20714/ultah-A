@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('langit.gif') no-repeat center center fixed;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+/* class hidden seharusnya DI LUAR selector body */
+.hidden {
+  display: none;
+}
+
+.container {
+  text-align: center;
+  margin-top: 100px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  width: 70%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.message-box {
+  margin-top: 20px;
+}
+
+.title-gif {
+  display: block;
+  margin: 30px auto 0 auto;
+  width: 300px;
+}
+
+.cat-gif {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  width: 150px;
+}
+
+.fall {
+  position: absolute;
+  width: 50px;
+  animation: fall 6s linear infinite;
+  opacity: 0.8;
+}
+
+.paper1 {
+  top: -100px;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.paper2 {
+  top: -100px;
+  left: 70%;
+  animation-delay: 2s;
+}
+
+.flower1 {
+  top: -150px;
+  left: 40%;
+  animation-delay: 1s;
+}
+
+.flower2 {
+  top: -150px;
+  left: 80%;
+  animation-delay: 3s;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+/* Pesan dengan transisi opacity */
+.pesan {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease, max-height 0.5s ease;
+  font-size: 1.1em;
+  line-height: 1.6em;
+}
+
+.pesan.show {
+  opacity: 1;
+  max-height: 500px;
+  overflow: visible;
+}
+
+/* Tombol */
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 10px;
+  border: none;
+  background-color: #5f9ea0;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #497777;
+}
